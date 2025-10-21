@@ -1,4 +1,4 @@
-package com.codehub.address;
+package com.codehub.address.controller;
 
 import com.codehub.address.dto.AddressDTO;
 import com.codehub.address.service.AddressService;
@@ -19,7 +19,7 @@ public class AddressController {
 
     private final AddressService addressService;
 
-    @GetMapping("/{employeeId}")
+    @GetMapping("/employee/{employeeId}")
     public ResponseEntity<List<AddressDTO>> getAddressesByEmployeeId(@PathVariable Long employeeId) {
         List<AddressDTO> addresses = addressService.getAddressesByEmployeeId(employeeId);
         return new ResponseEntity<>(addresses, HttpStatus.OK);

@@ -1,5 +1,5 @@
 server:
-  port: 9000
+  port: 9001
   servlet:
     context-path: /api/v1
 spring:
@@ -16,7 +16,3 @@ spring:
       ddl-auto: update
     database: mysql
     database-platform: org.hibernate.dialect.MySQLDialect
-
-address:
-  service:
-    url: "http://localhost:9091/api/v1"
